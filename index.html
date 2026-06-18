@@ -1,357 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bishal Khadka Kshetri - Portfolio</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bishal · Portfolio</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- ===== NAVBAR ===== -->
-    <nav class="navbar">
-        <div id="logo">
-            <img src="images/logo.png" alt="logo">
-        </div>
-        <ul class="nav-menu" id="navMenu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+  <div class="container">
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav id="navbar">
+      <div class="logo">
+        <img src="images/logo.png" class="logo-img" alt="logo">
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
     </nav>
 
-    <!-- ===== HERO SECTION ===== -->
+    <!-- ===== HERO ===== -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="about-heading">Bishal Khadka Kshetri</h1>
-            <p>I am a beginner Frontend Developer passionate about creating clean, responsive, and user-friendly websites. I have basic knowledge of HTML, CSS, JavaScript, and PHP, and I enjoy learning new technologies to improve my skills.</p>
-            <div class="cta-buttons">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="#contact" class="btn btn-secondary">Contact Me</a>
-            </div>
+      <div class="hero-content">
+        <div class="greeting">Hello, I'm</div>
+        <h1><span>Bishal Khadka Kshetri</span></h1>
+        <div class="tagline">
+          And I'm a <span class="typing-text" id="typingText">Web Developer</span>
         </div>
+        <p>
+          I am a Frontend Developer passionate about creating clean, responsive, and user-friendly websites. I have basic knowledge of HTML, CSS, JavaScript, and PHP, and I enjoy learning new technologies to improve my skills.
+        </p>
+
+        <div class="social-icons">
+          <a href="https://www.facebook.com/bishalkhadka71433" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/in/bishal-khadka-kshetri-a27226416/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/kshetribishal33-a11y" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.tiktok.com/@bishal12_3?_r=1&_t=ZS-97J6mUp5PYi"  target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+
+        <div class="btn-group">
+          <a href="#" class="btn btn-primary" id="viewCVBtn">
+            <i class="fas fa-file-pdf"></i> View CV
+          </a>
+          <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="avatar-wrapper">
+          <div class="avatar">
+            <img src="images/my-pic.jpg" alt="Bishal" />
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- ===== ABOUT SECTION ===== -->
-    <section id="about" class="about">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-container">
-           <div class="profile-img">
-                <div class="card-wrapper">
-                    <div class="card">
-                        <img src="images/my-pic.jpg" alt="my pic">
-                    </div>
-                </div>
-            </div>
-            <div class="about-content">
-                <h3>Frontend Developer</h3>
-                <p><strong> Hello! I'm Bishal Khadka Kshetri.</strong> I am a passionate beginner Frontend Developer and a Computer Engineering student, currently pursuing a Diploma in Computer Engineering. I enjoy creating modern, responsive, and user-friendly websites, and I have a basic understanding of HTML, CSS, JavaScript, and PHP.</p>
-                 <p>As a student and a learner, I am always exploring new technologies and improving my coding skills.</p>   
-                <p>My goal is to become a skilled professional developer and expand my knowledge from frontend to full-stack development. I am always ready to learn, adapt, and take on new challenges in the world of web development.</p>
-            </div>
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="section">
+      <h2 class="section-title">About</h2>
+      <div class="about-wrapper">
+        <div class="about-image">
+          <div class="about-img-wrapper">
+            <img src="images/about-pic.jpeg" alt="Bishal" />
+            <div class="img-overlay"></div>
+          </div>
         </div>
+        <div class="about-text">
+          <p>
+            I am a passionate <span class="highlight"> Frontend Developer</span> and a <span class="highlight">Computer Engineering</span> student, 
+            currently pursuing a Diploma in Computer Engineering. I enjoy creating modern, 
+            responsive, and user-friendly websites, and I have a basic understanding of
+            HTML, CSS, JavaScript, and PHP.
+          </p>
+          <p>
+           As a student and a learner, I am always exploring new technologies and improving my coding skills.
+          </p>
+          <p>
+            My goal is to become a skilled professional developer and expand my knowledge from Frontend to <span class="highlight"> Full-Stack Developer</span>. I am always ready to learn, adapt, and take on new challenges in the world of web development.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <!-- ===== SKILLS SECTION ===== -->
-    <section id="skills">
-        <h2 class="section-title">Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-item">
-                <div class="skill-name">
-                    <span>HTML</span>
-                    <span class="skill-percentage">65%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" data-width="65%"></div>
-                </div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-name">
-                    <span>CSS</span>
-                    <span class="skill-percentage">50%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" data-width="50%"></div>
-                </div>
-            </div>
-            <div class="skill-item">
-    <div class="skill-name">
-        <span>JavaScript</span>
-        <span class="skill-percentage">25%</span>
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="section">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-container" id="skillsContainer">
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name"><i class="fab fa-html5" style="color:var(--accent);"></i> HTML5</span>
+            <span class="skill-percent">75%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="75"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name"><i class="fab fa-css3-alt" style="color:var(--accent);"></i> CSS3</span>
+            <span class="skill-percent">60%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="60"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name"><i class="fab fa-js" style="color:var(--accent);"></i> JavaScript</span>
+            <span class="skill-percent">40%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="40"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name"><i class="fab fa-php" style="color:var(--accent);"></i> PHP</span>
+            <span class="skill-percent">20%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="20"></div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects" class="section">
+  <h2 class="section-title">Projects</h2>
+  <div class="projects-grid" id="projectsGrid">
+    
+    <!-- Project 1 - Completed -->
+    <div class="project-item">
+      <div class="project-img">
+        <img src="images/project-pic.png" alt="NoteSnap" />
+      </div>
+      <div class="project-info">
+        <h3>NoteSnap</h3>
+        <p>A complete educational platform for +2 level students in Nepal.</p>
+        <span class="status-badge in-progress">
+          <i class="fas fa-spinner fa-spin"></i> In Progress
+        </span>
+      </div>
     </div>
-    <div class="skill-bar">
-        <div class="skill-progress" data-width="25%"></div>
+
+    <!-- Project 2 - In Progress -->
+    <div class="project-item">
+      <div class="project-img">
+        <img src="images/Online-Voting System.png" alt="Online Voting System"/>
+      </div>
+      <div class="project-info">
+        <h3>Online Voting System</h3>
+        <p>An online system for secure, convenient, and transparent digital voting from anywhere.</p>
+        <span class="status-badge in-progress">
+          <i class="fas fa-spinner fa-spin"></i> In Progress
+        </span>
+      </div>
     </div>
-</div>
-            <div class="skill-item">
-                <div class="skill-name">
-                    <span>PHP</span>
-                    <span class="skill-percentage">10%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" data-width="10%"></div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- ===== PROJECTS SECTION ===== -->
-    <section id="projects">
-        <h2 class="section-title">Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="images/project-pic.png">
-                </div>
-                <div class="project-content">
-                    <h3>NoteSnap</h3>
-                    <p>Educational Platform, where you can get all +2 level faculties Notes, Syllabus and Old Questions.</p>
-                </div>
-            </div>
-       
-        </div>
-    </section>
+    <!-- Project 3 - Planned -->
+    <div class="project-item">
+      <div class="project-img">
+        <img src="images/Student-Dashboard (1).png" alt="Student-Dashboard" />
+      </div>
+      <div class="project-info">
+        <h3>Student-Dashboard</h3>
+        <p>A single web platform where students track attendance, results, assignments, courses, and notices all in one place.</p>
+        <span class="status-badge in-progress">
+          <i class="fas fa-spinner fa-spin"></i> In Progress
+        </span>
+      </div>
+    </div>
 
-    <!-- ===== CONTACT SECTION ===== -->
-    <section id="contact" class="contact">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <p>kshetribishal33@gmail.com</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <div>
-                        <p>+977 9762472585</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <p>Pariwartan-05, Rolpa, Nepal</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div>
-                        <div class="social-links">
-                            <a href="https://www.facebook.com/bee.shaal.935443" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in" target="_blank" rel="noopener noreferrer"></i></a>
-                            <a href="https://github.com/kshetribishal33-a11y" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
+  </div>
+</section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+          <div class="contact-detail">
+            <i class="fas fa-envelope"></i>
+            <div class="detail-content">
+              <span class="label">Email</span>
+              <span class="value">kshetribishal33@gmail.com</span>
             </div>
-            <form class="contact-form" id="contactForm">
-                <div class="form-group">
-                    <input type="text" id="name" placeholder="Your Name" required>
-                </div><br>
-                <div class="form-group">
-                    <input type="email" id="email" placeholder="Your Email" required>
-                </div><br>
-                <div class="form-group">
-                    <textarea id="message" placeholder="Your Message" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary1" style="width: 100%;">Send Message</button>
-            </form>
+          </div>
+          <div class="contact-detail">
+            <i class="fas fa-phone"></i>
+            <div class="detail-content">
+              <span class="label">Phone</span>
+              <span class="value">+977 9762472585</span>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="detail-content">
+              <span class="label">Address</span>
+              <span class="value">Pariwartan-05, Rolpa, Nepal</span>
+            </div>
+          </div>
         </div>
+        <div class="contact-form" id="contactForm">
+          <input type="text" id="nameInput" placeholder="Your Name" required />
+          <input type="email" id="emailInput" placeholder="Your Email" required />
+          <textarea id="messageInput" placeholder="Your Message" required></textarea>
+          <button class="btn" id="sendBtn">Send Message</button>
+        </div>
+      </div>
     </section>
 
     <!-- ===== FOOTER ===== -->
-    <footer class="footer">
-        <p>&copy; 2026 Bishal Khadka Kshetri. All rights reserved.</p>
+    <footer>
+      <p>© 2026 Bishal Khadka Kshetri. All rights reserved.<i class="fas fa-heart"></i></p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="index.js"></script>
-</body>
-</html>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bishal Khadka Kshetri - Portfolio</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- ===== NAVBAR ===== -->
-    <nav class="navbar">
-        <div id="logo">
-            <img src="images/logo.png" alt="logo">
-        </div>
-        <ul class="nav-menu" id="navMenu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </nav>
 
-    <!-- ===== HERO SECTION ===== -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="about-heading">Bishal Khadka Kshetri</h1>
-            <p>I am a beginner Frontend Developer passionate about creating clean, responsive, and user-friendly websites. I have basic knowledge of HTML, CSS, JavaScript, and PHP, and I enjoy learning new technologies to improve my skills.</p>
-            <div class="cta-buttons">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="#contact" class="btn btn-secondary">Contact Me</a>
-            </div>
-        </div>
-    </section>
+  </div>
 
-    <!-- ===== ABOUT SECTION ===== -->
-    <section id="about" class="about">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-container">
-           <div class="profile-img">
-                <div class="card-wrapper">
-                    <div class="card">
-                        <img src="images/my-pic.jpg" alt="my pic">
-                    </div>
-                </div>
-            </div>
-            <div class="about-content">
-                <h3>Frontend Developer</h3>
-                <p><strong> Hello! I'm Bishal Khadka Kshetri.</strong> I am a passionate beginner Frontend Developer and a Computer Engineering student, currently pursuing a Diploma in Computer Engineering. I enjoy creating modern, responsive, and user-friendly websites, and I have a basic understanding of HTML, CSS, JavaScript, and PHP.</p>
-                 <p>As a student and a learner, I am always exploring new technologies and improving my coding skills.</p>   
-                <p>My goal is to become a skilled professional developer and expand my knowledge from frontend to full-stack development. I am always ready to learn, adapt, and take on new challenges in the world of web development.</p>
-            </div>
-        </div>
-    </section>
+  <!-- ===== DARK MODE TOGGLE ===== -->
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+    <i class="fas fa-sun" id="themeIcon"></i>
+    <span class="toggle-label" id="themeLabel"></span>
+  </button>
 
-    <!-- ===== SKILLS SECTION ===== -->
-    <section id="skills">
-        <h2 class="section-title">Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-item">
-                <div class="skill-name">
-                    <span>HTML</span>
-                    <span class="skill-percentage">65%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" data-width="65%"></div>
-                </div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-name">
-                    <span>CSS</span>
-                    <span class="skill-percentage">50%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" data-width="50%"></div>
-                </div>
-            </div>
-            <div class="skill-item">
-    <div class="skill-name">
-        <span>JavaScript</span>
-        <span class="skill-percentage">25%</span>
-    </div>
-    <div class="skill-bar">
-        <div class="skill-progress" data-width="25%"></div>
-    </div>
-</div>
-            <div class="skill-item">
-                <div class="skill-name">
-                    <span>PHP</span>
-                    <span class="skill-percentage">10%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" data-width="10%"></div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- ===== TOAST ===== -->
+  <div class="toast" id="toast"></div>
 
-    <!-- ===== PROJECTS SECTION ===== -->
-    <section id="projects">
-        <h2 class="section-title">Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="images/project-pic.png">
-                </div>
-                <div class="project-content">
-                    <h3>NoteSnap</h3>
-                    <p>Educational Platform, where you can get all +2 level faculties Notes, Syllabus and Old Questions.</p>
-                </div>
-            </div>
-       
-        </div>
-    </section>
-
-    <!-- ===== CONTACT SECTION ===== -->
-    <section id="contact" class="contact">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <p>kshetribishal33@gmail.com</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <div>
-                        <p>+977 9762472585</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <p>Pariwartan-05, Rolpa, Nepal</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div>
-                        <div class="social-links">
-                            <a href="https://www.facebook.com/bee.shaal.935443" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in" target="_blank" rel="noopener noreferrer"></i></a>
-                            <a href="https://github.com/kshetribishal33-a11y" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <form class="contact-form" id="contactForm">
-                <div class="form-group">
-                    <input type="text" id="name" placeholder="Your Name" required>
-                </div><br>
-                <div class="form-group">
-                    <input type="email" id="email" placeholder="Your Email" required>
-                </div><br>
-                <div class="form-group">
-                    <textarea id="message" placeholder="Your Message" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary1" style="width: 100%;">Send Message</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer">
-        <p>&copy; 2026 Bishal Khadka Kshetri. All rights reserved.</p>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="index.js"></script>
+ 
+  <script src="index.js"></script>
 </body>
 </html>
