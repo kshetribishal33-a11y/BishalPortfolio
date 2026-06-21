@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bishal · Portfolio</title>
+  <title>Bishal's Portfolio</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <link rel="stylesheet" href="style.css">
@@ -140,6 +140,7 @@
   <div class="projects-grid" id="projectsGrid">
     
     <!-- Project 1 - Completed -->
+     <!-- <a href="#" target="_blank" class="project-links"> -->
     <div class="project-item">
       <div class="project-img">
         <img src="Images/project-pic.png" alt="NoteSnap" />
@@ -152,8 +153,10 @@
         </span>
       </div>
     </div>
+    <!-- </a> -->
 
     <!-- Project 2 - In Progress -->
+    <!-- <a href="#" target="_blank" class="project-links" > -->
     <div class="project-item">
       <div class="project-img">
         <img src="Images/Online-voting system.png" alt="Online Voting System"/>
@@ -166,8 +169,10 @@
         </span>
       </div>
     </div>
+    <!-- </a> -->
 
     <!-- Project 3 - Planned -->
+     <!-- <a href="#" target="_blank" class="project-links"> -->
     <div class="project-item">
       <div class="project-img">
         <img src="Images/Student-Dashboard (1).png" alt="Student-Dashboard" />
@@ -180,6 +185,8 @@
         </span>
       </div>
     </div>
+    <!-- </a> -->
+
 
   </div>
 </section>
@@ -212,12 +219,12 @@
             </div>
           </div>
         </div>
-        <div class="contact-form" id="contactForm">
+        <form class="contact-form" id="contactForm">
           <input type="text" id="nameInput" placeholder="Your Name" required />
           <input type="email" id="emailInput" placeholder="Your Email" required />
           <textarea id="messageInput" placeholder="Your Message" required></textarea>
           <button class="btn" id="sendBtn">Send Message</button>
-        </div>
+        </form>
       </div>
     </section>
 
@@ -234,10 +241,10 @@
     <span class="toggle-label" id="themeLabel"></span>
   </button>
 
-  <!-- ===== TOAST ===== -->
+  <!-- ===== TOAST for notification popup===== -->
   <div class="toast" id="toast"></div>
 
- 
+ <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="index.js"></script>
 </body>
 </html>

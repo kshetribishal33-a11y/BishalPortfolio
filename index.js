@@ -173,44 +173,12 @@
     // =============================================
     document.getElementById('viewCVBtn').addEventListener('click', (e) => {
       e.preventDefault();
-      const pdfURL = 'CV pdf.pdf';
+      const pdfURL = 'My CV.pdf';
       window.open(pdfURL, '_blank');
       showToast('📄 Opening CV...');
     });
 
-    // =============================================
-    // 8. CONTACT FORM
-    // =============================================
-    const toast = document.getElementById('toast');
-    let toastTimeout;
-
-    function showToast(message) {
-      toast.textContent = message;
-      toast.classList.add('show');
-      clearTimeout(toastTimeout);
-      toastTimeout = setTimeout(() => {
-        toast.classList.remove('show');
-      }, 3000);
-    }
-
-    document.getElementById('sendBtn').addEventListener('click', (e) => {
-      e.preventDefault();
-      const name = document.getElementById('nameInput').value.trim();
-      const email = document.getElementById('emailInput').value.trim();
-      const message = document.getElementById('messageInput').value.trim();
-
-      if (!name || !email || !message) {
-        showToast('⚠️ Please fill in all fields.');
-        return;
-      }
-
-      if (!email.includes('@') || !email.includes('.')) {
-        showToast('⚠️ Please enter a valid email address.');
-        return;
-      }
-
-      showToast('✅ Message sent! I\'ll get back to you soon.');
-    });
+ 
 
     // =============================================
     // 9. SMOOTH SCROLL
@@ -229,3 +197,62 @@
     });
 
     console.log('🚀 Portfolio loaded with all features!');
+
+    // =============================================
+// 8. CONTACT FORM (EmailJS + Toast)
+// =============================================
+
+emailjs.init("FoWXH7Z_79yH-ny0b");
+
+const toast = document.getElementById('toast');
+let toastTimeout;
+
+function showToast(message) {
+  toast.textContent = message;
+  toast.classList.add('show');
+
+  clearTimeout(toastTimeout);
+  toastTimeout = setTimeout(() => {
+    toast.classList.remove('show');
+  }, 3000);
+}
+
+document.getElementById('sendBtn').addEventListener('click', function (e) {
+  e.preventDefault();
+
+  const name = document.getElementById('nameInput').value.trim();
+  const email = document.getElementById('emailInput').value.trim();
+  const message = document.getElementById('messageInput').value.trim();
+
+  // Validation
+  if (!name || !email || !message) {
+    showToast('⚠️ Please fill in all fields.');
+    return;
+  }
+
+  if (!email.includes('@') || !email.includes('.')) {
+    showToast('⚠️ Please enter a valid email address.');
+    return;
+  }
+
+  // Send email using EmailJS
+  emailjs.send("service_yv3aa7l", "template_k95yq9q", {
+    name: name,
+    email: email,
+    message: message
+  })
+  .then(() => {
+    showToast('✅ Message sent successfully!');
+    
+    // clear form
+    document.getElementById('nameInput').value = "";
+    document.getElementById('emailInput').value = "";
+    document.getElementById('messageInput').value = "";
+  })
+  .catch((error) => {
+    console.error(error);
+    showToast('❌ Failed to send message!');
+  });
+
+
+});
