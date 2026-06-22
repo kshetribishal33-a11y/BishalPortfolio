@@ -1085,6 +1085,7 @@
 
       .about-image .about-img-wrapper {
         max-width: 250px;
+        max-height: 200px;
       }
 
       .projects-grid {
