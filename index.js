@@ -1,7 +1,7 @@
 // =============================================
     // 1. DARK MODE TOGGLE
     // =============================================
-    const themeToggle = document.getElementById('themeToggle');
+    const themeToggle = document.getElementById('themeToggle');  
     const themeIcon = document.getElementById('themeIcon');
     const themeLabel = document.getElementById('themeLabel');
     let isDark = true;
@@ -35,7 +35,7 @@
     // =============================================
     // 2. TYPING ANIMATION
     // =============================================
-    const roles = ['Fronted Developer', 'UI/UX Designer'];
+    const roles = ['Front-end Developer', 'UI/UX Designer'];
     let roleIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
