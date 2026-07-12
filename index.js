@@ -35,7 +35,7 @@
     // =============================================
     // 2. TYPING ANIMATION
     // =============================================
-    const roles = ['Front-end Developer', 'UI/UX Designer'];
+    const roles = ['Front-end Developer'];
     let roleIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
